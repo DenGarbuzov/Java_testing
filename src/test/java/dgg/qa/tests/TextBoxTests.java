@@ -6,7 +6,6 @@ import com.codeborne.selenide.SelenideElement;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
 
 
 import java.io.File;
@@ -27,19 +26,12 @@ public class TextBoxTests {
         String userEmail = "monster@corporation.com";
         String phoneNumber = "1234567890";
         String address = "Monster town";
-//        String bDay = "07 May 1901";
 
         open("https://demoqa.com/automation-practice-form");
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
         $("#userEmail").setValue(userEmail);
         $("#userNumber").setValue(phoneNumber);
-//        $("#dateOfBirthInput").click();
-//        $("#dateOfBirthInput").execute(pickDate(bDay));
-//                sendKeys((Keys.CONTROL + "a"));
-//        $("#dateOfBirthInput").sendKeys(Keys.BACK_SPACE);
-//                sendKeys("u'\\ue009'" + "u'\\ue003'");
-//        $("#dateOfBirthInput").setValue(bDay);
         $("#subjectsInput").setValue("M").pressEnter();
         $("[for=gender-radio-1]").click();
         $("#uploadPicture").uploadFile(new File("src/storage/photo.jpg"));
@@ -67,7 +59,6 @@ public class TextBoxTests {
         $(tableSelectorIndex,1).shouldHave(text(userEmail));
         $(tableSelectorIndex,2).shouldHave(text("Male"));
         $(tableSelectorIndex,3).shouldHave(text(phoneNumber));
-//        $(tableSelectorIndex,4).shouldHave(text(bDay));
         $(tableSelectorIndex,5).shouldHave(text("Maths"));
         $(tableSelectorIndex,6).shouldHave(text("Sports"));
         $(tableSelectorIndex,7).shouldHave(text("photo.jpg"));
