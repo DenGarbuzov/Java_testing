@@ -1,3 +1,4 @@
+package dgg.qa.tests;
 
 import org.junit.jupiter.api.Test;
 
