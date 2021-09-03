@@ -50,22 +50,16 @@ public class TextBoxTests {
         SelenideElement table = $(".table-responsive");
         table.isSelected();
 
-        table.shouldHave(text(firstName));
-        table.shouldHave(text(lastName));
-        table.shouldHave(text(userEmail));
-        table.shouldHave(text(phoneNumber));
-        table.shouldHave(text(address));
-
         String tableSelectorIndex = ".table-responsive tbody tr";
 
-        $(tableSelectorIndex,0).shouldHave(text(firstName + " " + lastName));
-        $(tableSelectorIndex,1).shouldHave(text(userEmail));
-        $(tableSelectorIndex,2).shouldHave(text("Male"));
-        $(tableSelectorIndex,3).shouldHave(text(phoneNumber));
-        $(tableSelectorIndex,4).shouldHave(text(bDay));
-        $(tableSelectorIndex,5).shouldHave(text("Maths"));
-        $(tableSelectorIndex,6).shouldHave(text("Sports"));
-        $(tableSelectorIndex,7).shouldHave(text("photo.jpg"));
-        $(tableSelectorIndex,8).shouldHave(text(address));
-        $(tableSelectorIndex,9).shouldHave(text("NCR Delhi "));
+        $(tableSelectorIndex,0).shouldHave(text(firstName + " " + lastName), text("Student Name"));
+        $(tableSelectorIndex,1).shouldHave(text(userEmail), text("Student Email"));
+        $(tableSelectorIndex,2).shouldHave(text("Male"), text("Gender"));
+        $(tableSelectorIndex,3).shouldHave(text(phoneNumber), text("Mobile"));
+        $(tableSelectorIndex,4).shouldHave(text(bDay), text("Date of Birth"));
+        $(tableSelectorIndex,5).shouldHave(text("Maths"), text("Subjects"));
+        $(tableSelectorIndex,6).shouldHave(text("Sports"), text("Hobbies"));
+        $(tableSelectorIndex,7).shouldHave(text("photo.jpg"), text("Picture"));
+        $(tableSelectorIndex,8).shouldHave(text(address), text("Address"));
+        $(tableSelectorIndex,9).shouldHave(text("NCR Delhi "), text("State and City"));
     }}
