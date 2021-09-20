@@ -3,3 +3,7 @@
 /build/
 /build/classes/java/test/
 /README.md
+/.idea/
+/src/test/java/docs/
+/.idea/
+/gradle/
