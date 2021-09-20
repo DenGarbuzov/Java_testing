@@ -3,3 +3,8 @@
 /build/
 /build/classes/java/test/
 /README.md
+/.idea/
+/gradlew
+/gradlew.bat
+/settings.gradle
+/gradle
